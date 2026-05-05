@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;
+import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class Main {
@@ -85,6 +86,9 @@ public class Main {
         String[] names = {"Ann", "Bob", "Carol"};
         String[] randomList = randomlySelectedValues(15, names, () -> new Random().nextInt(0, names.length));
         System.out.println(Arrays.toString(randomList));
+
+        System.out.println("------");
+
     }
 
     public static <T> T calculator(BinaryOperator<T> function, T value1, T value2) {
